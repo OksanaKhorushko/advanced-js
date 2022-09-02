@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+</head>
+<body>
+    <p id="text">Gandalf: 'How bright your garden looks!'
+        Bilbo: 'Yes. I am very fond indeed of it, and of all the dear old Shire; but I think I need a holiday'
+        Gandalf: 'You mean to go on with your plan then?'
+        Bilbo: 'I do. I made up my mind months ago, and I haven't changed it.'
+        Gandalf: 'Very well. It is no good saying any more. Stick to your plan — your whole plan, mind — and I hope it will turn out for the best, for you, and for all of us.'
+        Bilbo: 'I hope so. Anyway I mean to enjoy myself on Thursday, and have my little joke.'
+        Gandalf: 'Who will laugh, I wonder?'
+        Bilbo: 'We shall see.'
+    </p>
+    <button id="replace">Replace</button>
+    <script>
+        const text = document.getElementById('text');
+        document.getElementById('replace').addEventListener('click', () => {
+            text.textContent = text.textContent.replace(/\B'|'\B/g, '"');
+        });
+    </script>
+</body>
+</html>
